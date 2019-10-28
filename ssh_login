@@ -91,7 +91,9 @@ function AutoLogin(){
                 \"*assword\" {set timeout 6000; send \"${CONFIG[4]}\n\"; exp_continue ; sleep 3; }
                 \"*passphrase\" {set timeout 6000; send \"${CONFIG[4]}\r\n\"; exp_continue ; sleep 3; }
                 \"yes/no\" {send \"yes\n\"; exp_continue;}
-                \"Last*\" {  send_user \"\n成功登录【${CONFIG[0]}】\n\";}
+                \"$*\" {send \"echo Login Success 成功\n\";}
+                \"Last\" {send \"echo Login Success 成功\n\";}
+                \"Welcome\" {send \"echo Login Success 成功\n\";}
         }
        interact
     ";
